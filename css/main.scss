@@ -1,0 +1,180 @@
+:root {
+  --base: #ffffff;
+  --card-bg: #1b1913;
+  --card-bg-2: #423d35;
+  --white: #edecec;
+  --text-color: #edecec;
+  --text-muted: #969592;
+  --primary: #18e299;
+  --body-font: "Inter", sans-serif;
+  --header-font: "Inter", sans-serif;
+  --header-font-2: "Geist Mono", monospace;
+  --color-text-main: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--base);
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+  font-family: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 6px 12px;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  border: 1px solid transparent;
+  font-weight: 600;
+  &.btn-outline {
+    background: #ffffff19;
+  }
+  &.btn-white {
+    background: var(--white);
+    color: #000;
+  }
+  &.btn-big {
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+}
+
+.text-light {
+  color: var(--text-color);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: transparent;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+
+  .logo-container {
+    width: 95px;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+    }
+    a {
+      font-weight: 600;
+      color: var(--text-color);
+    }
+  }
+}
+
+.hero {
+  margin-top: -100px;
+
+  min-height: 500px;
+
+  // position: relative;
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    background: url("../assets/bg-light.svg");
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-container {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .hero-new {
+      background: #000;
+      padding: 8px 10px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-size: 12px;
+        padding: 6px;
+        border-radius: 10px;
+        background: green;
+      }
+
+      .icon {
+        background: #fff;
+        border-radius: 50%;
+        color: #000;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      }
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
