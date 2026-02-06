@@ -164,4 +164,25 @@ header {
 }
 .hero .hero-container h1 {
   text-align: center;
+}
+
+.companies .companies-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.companies .companies-container .company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companies .companies-container .company img {
+  width: 120px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.built .built-container {
+  background: green;
 }/*# sourceMappingURL=main.css.map */

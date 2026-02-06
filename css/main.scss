@@ -178,3 +178,29 @@ header {
     }
   }
 }
+
+.companies {
+  .companies-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    .company {
+      // background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 120px;
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.built {
+  .built-container {
+    background: green;
+  }
+}
